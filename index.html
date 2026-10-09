@@ -49,6 +49,17 @@ h1 span{display:block;font-style:italic;color:#f05b98;font-size:.66em;margin-top
 .big-heart{font-size:60px;animation:pulse 1.5s infinite}
 @keyframes pulse{50%{transform:scale(1.12)}}
 footer{text-align:center;font:12px/1.8 Arial,sans-serif;color:#b16d89;padding:25px 10px}
+/* First-screen surprise gate: keep all photos and messages hidden until she taps */
+body:not(.unlocked) main{visibility:hidden;opacity:0}
+body.unlocked main{visibility:visible;opacity:1;transition:opacity .7s ease}
+.intro-screen{position:fixed;inset:0;z-index:200;display:flex;align-items:center;justify-content:center;padding:24px;background:radial-gradient(circle at top left,#ffe0ed,transparent 42%),linear-gradient(135deg,#fff8fb,#ffe5f0);text-align:center;transition:opacity .65s ease,visibility .65s ease}
+.intro-screen.hide{opacity:0;visibility:hidden;pointer-events:none}
+.intro-card{width:min(560px,100%);padding:clamp(28px,7vw,54px) clamp(20px,6vw,42px);border:1px solid #ffd0e1;border-radius:30px;background:rgba(255,255,255,.82);box-shadow:0 20px 70px #d8498122}
+.intro-sparkle{font-size:38px;margin-bottom:12px}
+.intro-card h1{font-size:clamp(38px,9vw,64px);margin:12px 0;color:#c52f70}
+.intro-card p{font-size:clamp(16px,3.8vw,19px);line-height:1.8;color:#81546a;margin:18px auto 25px;max-width:440px}
+.intro-card .btn{font-family:Arial,sans-serif;font-size:15px;padding:15px 24px}
+@media(prefers-reduced-motion:reduce){.intro-screen,body.unlocked main{transition:none}}
 .floating{position:fixed;bottom:-30px;pointer-events:none;z-index:-1;animation:floatup linear forwards;opacity:.7}
 @keyframes floatup{to{transform:translateY(-110vh) rotate(25deg);opacity:0}}
 
@@ -93,6 +104,16 @@ footer{text-align:center;font:12px/1.8 Arial,sans-serif;color:#b16d89;padding:25
 </style>
 </head>
 <body>
+<div class="intro-screen" id="introScreen">
+  <div class="intro-card">
+    <div class="intro-sparkle">🎀 ✨ 💗</div>
+    <div class="eyebrow">A little hello from Kaju</div>
+    <h1>Heyy Rubyy! <span>♡</span></h1>
+    <p>I'm randomly talking to you, but actually, my sister is the one who's introducing us! 😂❤️<br><br>Soo... shall we get to know each other? 🥹💗</p>
+    <button class="btn" onclick="startSurprise()">Click to Open Your Surprise 💌</button>
+    <p style="font:12px Arial,sans-serif;margin:18px 0 0;color:#b16d89">A tiny surprise made by Kaju ♡</p>
+  </div>
+</div>
 <div class="light-flash" id="lightFlash"></div>
 <main>
   <div class="topline">A little website made with a lot of love</div>
@@ -186,6 +207,12 @@ const heartMessages=[
   "I hope I can be someone who listens to you, supports your dreams, and makes you feel appreciated—not just today, but in the little moments too. 🌷",
   "My favourite kind of future is one where we keep growing, laughing, and making beautiful memories together, one step at a time. ✨"
 ];
+function startSurprise(){
+ document.body.classList.add('unlocked');
+ document.getElementById('introScreen').classList.add('hide');
+ setTimeout(()=>document.getElementById('introScreen').remove(),700);
+ window.scrollTo({top:0,behavior:'smooth'});
+}
 function openHeart(i,button){
   document.querySelectorAll('.heart-btn').forEach((b,j)=>{if(j===i)b.classList.add('open')});
   document.getElementById('heartMessage').textContent=heartMessages[i];
