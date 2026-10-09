@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fff0f5">
+<title>For Rubyy ♡ From Kaju</title>
+<style>
+:root{--pink:#ff5f9e;--rose:#e83e78;--soft:#fff0f5;--ink:#63364b;--cream:#fffafc}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Georgia,'Times New Roman',serif;color:var(--ink);background:radial-gradient(circle at top left,#ffe0ed,transparent 35%),linear-gradient(135deg,#fff8fb,#ffeaf3);overflow-x:hidden}
+button{font:inherit;cursor:pointer}
+main{width:min(920px,92%);margin:auto;padding:24px 0 55px}
+.topline{text-align:center;font:600 12px/1.4 Arial,sans-serif;letter-spacing:4px;text-transform:uppercase;color:#c45a83;margin:16px 0 22px}
+.hero{text-align:center;padding:35px 20px 24px}
+.eyebrow{font:12px Arial,sans-serif;letter-spacing:3px;text-transform:uppercase;color:#c45a83}
+h1{font-size:clamp(42px,8vw,76px);line-height:1;margin:16px 0;color:#c52f70;font-weight:normal}
+h1 span{display:block;font-style:italic;color:#f05b98;font-size:.66em;margin-top:10px}
+.sub{font-size:18px;line-height:1.7;max-width:590px;margin:18px auto;color:#81546a}
+.pill{display:inline-block;background:#fff;border:1px solid #ffd0e1;border-radius:30px;padding:10px 16px;font:13px Arial,sans-serif;color:#c23d75}
+.card{background:rgba(255,255,255,.82);border:1px solid #ffd7e5;box-shadow:0 18px 55px rgba(183,61,111,.10);border-radius:28px;padding:clamp(20px,5vw,42px);margin:24px 0}
+.photo-wrap{max-width:360px;margin:0 auto 20px;position:relative;padding:10px;border-radius:180px 180px 28px 28px;background:linear-gradient(145deg,#ff8fba,#fff,#e85a98);box-shadow:0 12px 35px #e86b9b33}
+.photo-wrap:before,.photo-wrap:after{content:"♡";position:absolute;color:#f05b98;font-size:35px;z-index:2}
+.photo-wrap:before{top:10px;left:-15px}.photo-wrap:after{right:-15px;bottom:20px}
+.photo-wrap img{display:block;width:100%;height:440px;object-fit:cover;object-position:center 30%;border-radius:170px 170px 20px 20px;background:#ffe5ef}
+.caption{text-align:center;font-size:15px;font-style:italic;color:#c14d7c;margin:12px 0 0}
+.section-title{text-align:center;font-size:clamp(27px,5vw,40px);font-weight:normal;color:#c52f70;margin:0 0 12px}
+.section-note{text-align:center;font:14px/1.7 Arial,sans-serif;color:#98647a;margin:0 auto 25px;max-width:570px}
+.btn{border:0;border-radius:30px;background:linear-gradient(120deg,#ff77ab,#e83e78);color:#fff;padding:13px 22px;box-shadow:0 8px 20px #e83e7830;transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.secondary{background:white;color:#c52f70;border:1px solid #ffc5da;box-shadow:none}
+.center{text-align:center}
+.hearts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:490px;margin:0 auto 18px}
+.heart-btn{background:#fff4f8;border:1px solid #ffd0e1;border-radius:20px;padding:18px 10px;color:#d83d7a;font-size:36px;transition:.2s}
+.heart-btn:hover,.heart-btn.open{transform:scale(1.04);background:#ffe0ed}
+.heart-btn small{display:block;font:12px Arial,sans-serif;margin-top:6px}
+.message{display:none;margin:12px auto 0;padding:16px;background:#fff5f9;border-radius:18px;border:1px dashed #f4a2c2;max-width:560px;line-height:1.7;text-align:center}
+.message.show{display:block;animation:fade .35s ease}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.quiz-options{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:20px 0}
+.quiz-options button{background:#fff;border:1px solid #ffc5da;border-radius:22px;padding:12px 17px;color:#b93870}
+.quiz-result{min-height:26px;text-align:center;color:#c52f70;line-height:1.6}
+.letter{max-width:700px;margin:auto;background:#fffdfd;border:1px solid #ffe0eb;padding:clamp(22px,5vw,42px);border-radius:12px;box-shadow:inset 0 0 0 6px #fff7fa}
+.letter h3{font-size:26px;font-weight:normal;color:#c52f70;text-align:center;margin-top:0}
+.letter p{font-size:17px;line-height:1.95;margin:0 0 16px}
+.signature{text-align:right!important;font-style:italic;color:#c52f70}
+.final{background:linear-gradient(145deg,#fff,#fff0f6);text-align:center}
+.big-heart{font-size:60px;animation:pulse 1.5s infinite}
+@keyframes pulse{50%{transform:scale(1.12)}}
+footer{text-align:center;font:12px/1.8 Arial,sans-serif;color:#b16d89;padding:25px 10px}
+.floating{position:fixed;bottom:-30px;pointer-events:none;z-index:-1;animation:floatup linear forwards;opacity:.7}
+@keyframes floatup{to{transform:translateY(-110vh) rotate(25deg);opacity:0}}
+@media(max-width:520px){main{width:94%;padding-top:10px}.hero{padding:25px 8px 16px}.photo-wrap{max-width:300px}.photo-wrap img{height:380px}.hearts{gap:7px}.heart-btn{font-size:30px;padding:14px 5px}.card{border-radius:22px}}
+</style>
+</head>
+<body>
+<main>
+  <div class="topline">A little website made with a lot of love</div>
+  <section class="hero">
+    <div class="eyebrow">A tiny surprise for my favourite person</div>
+    <h1>Hey, Rubyy! <span>♡ from your Kaju</span></h1>
+    <p class="sub">I made this little corner of the internet just for you. Take your time, tap the hearts, and save the sweetest part for last. 💗</p>
+    <span class="pill">Made especially for you ✨</span>
+  </section>
+
+  <section class="card center" id="photo">
+    <div class="photo-wrap"><img src="rubyy-photo.jpeg" alt="A special photo of Rubyy" onerror="this.style.display='none';document.getElementById('photoFallback').style.display='block'"></div>
+    <p id="photoFallback" style="display:none">Add your photo as <b>rubyy-photo.jpeg</b> in this same folder.</p>
+    <p class="caption">One photo, a thousand little reasons to smile. ♡</p>
+  </section>
+
+  <section class="card" id="hearts">
+    <h2 class="section-title">Open a little heart 💌</h2>
+    <p class="section-note">Tap each heart to unlock a tiny message from Kaju.</p>
+    <div class="hearts">
+      <button class="heart-btn" onclick="openHeart(0,this)" aria-label="Open first heart">♡<small>Tap me</small></button>
+      <button class="heart-btn" onclick="openHeart(1,this)" aria-label="Open second heart">♡<small>Tap me</small></button>
+      <button class="heart-btn" onclick="openHeart(2,this)" aria-label="Open third heart">♡<small>Tap me</small></button>
+    </div>
+    <div class="message" id="heartMessage" aria-live="polite"></div>
+  </section>
+
+  <section class="card">
+    <h2 class="section-title">One tiny question… 🌷</h2>
+    <p class="section-note">Choose the answer that feels most like us.</p>
+    <div class="quiz-options">
+      <button onclick="answerQuiz('laugh')">Our silly laughs 😂</button>
+      <button onclick="answerQuiz('talk')">Our long talks 💬</button>
+      <button onclick="answerQuiz('future')">Our future dreams ✨</button>
+    </div>
+    <div class="quiz-result" id="quizResult" aria-live="polite"></div>
+  </section>
+
+  <section class="card" id="letter">
+    <h2 class="section-title">A letter for you 💗</h2>
+    <p class="section-note">The most important part of this little surprise.</p>
+    <div class="letter">
+      <h3>To my Rubyy, my favourite person ♡</h3>
+      <p>Hey, my Rubyy,</p>
+      <p>Sometimes, I wonder how one person can make ordinary days feel so special. Then I think of you, and somehow, the answer feels simple. You have a place in my heart that is completely your own, and I’m grateful for every smile, every conversation, and every little memory we make.</p>
+      <p>I can’t promise that every day will be perfect, or that life will always go exactly as we imagine. But I can promise that I want to keep learning, growing, and understanding you. I want to listen when you need to talk, cheer for your dreams, respect your feelings, and never stop appreciating the person you are.</p>
+      <p>When I think about the future, I hope we’ll look back at this time and smile at how far we’ve come. I hope we keep making memories, supporting each other through the difficult days, celebrating the happy ones, and choosing kindness even when things aren’t easy. I want our story to grow naturally, one honest day at a time.</p>
+      <p>You don’t have to be perfect to be precious to me. Just being yourself is already something I’m thankful for. If this little website makes you smile even for a moment, then my surprise has done exactly what I wanted it to do.</p>
+      <p>Thank you for being you, Rubyy. Here’s to the memories we’ve made and all the beautiful chapters still waiting for us. 💞</p>
+      <p class="signature">Forever yours,<br><b>Your Kaju ❤️</b></p>
+    </div>
+  </section>
+
+  <section class="card final">
+    <div class="big-heart">💖</div>
+    <h2 class="section-title">Our story is still being written…</h2>
+    <p class="sub">And this is just one small page in it. Whatever the future brings, I hope we keep filling it with honesty, laughter, care, and memories worth keeping.</p>
+    <button class="btn" onclick="showFinal()">Open your final surprise 🎁</button>
+    <div class="message" id="finalMessage">Rubyy, if you’re smiling right now, send your Kaju one little heart. ♡<br><br><b>You are loved, appreciated, and very special to me. — Kaju 💗</b></div>
+    <p style="margin-top:22px"><button class="btn secondary" onclick="window.scrollTo({top:0,behavior:'smooth'})">Read it again ↑</button></p>
+  </section>
+  <footer>Made with ♡ by Kaju, especially for Rubyy.<br>Keep this little memory close. ✨</footer>
+</main>
+<script>
+const heartMessages=[
+  "Your smile has a way of making an ordinary moment feel a little brighter. Never forget how special you are. 💗",
+  "I hope I can be someone who listens to you, supports your dreams, and makes you feel appreciated—not just today, but in the little moments too. 🌷",
+  "My favourite kind of future is one where we keep growing, laughing, and making beautiful memories together, one step at a time. ✨"
+];
+function openHeart(i,button){
+  document.querySelectorAll('.heart-btn').forEach((b,j)=>{if(j===i)b.classList.add('open')});
+  document.getElementById('heartMessage').textContent=heartMessages[i];
+  document.getElementById('heartMessage').classList.add('show');
+}
+function answerQuiz(kind){
+ const messages={
+  laugh:"Correct answer: all of them! 😂 The little moments become the best memories when we share them.",
+  talk:"Long talks, random topics, and being able to be ourselves—those are the moments I hope we always make time for. 💬",
+  future:"Our dreams matter, and I hope we encourage each other to grow while making lovely memories along the way. ✨"
+ };
+ document.getElementById('quizResult').textContent=messages[kind];
+}
+function showFinal(){document.getElementById('finalMessage').classList.add('show');}
+function floatingHeart(){
+ const el=document.createElement('div');el.className='floating';el.textContent=['♡','♥','💗','✧'][Math.floor(Math.random()*4)];
+ el.style.left=Math.random()*100+'vw';el.style.fontSize=(14+Math.random()*18)+'px';el.style.animationDuration=(7+Math.random()*6)+'s';
+ document.body.appendChild(el);setTimeout(()=>el.remove(),14000);
+}
+setInterval(floatingHeart,1800);
+</script>
+</body>
+</html>
